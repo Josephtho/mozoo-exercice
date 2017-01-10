@@ -1,0 +1,99 @@
+html{
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+body{
+	background-color: #111;
+}
+
+section.container{
+	position: relative;
+	height: 80vh;
+	margin: 0 auto;
+	width: 100%;
+
+}
+
+.classic,
+.zero{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: -30px 0;
+
+	pointer-events:none;
+}
+
+.classic{
+	background-image: url('../img/P1.png');
+	border-right: 5px solid white;
+	width: 50%;
+
+	z-index: 2;
+}
+
+.zero{
+	background-image: url('../img/P2.png');
+	width: 100%;
+}
+
+.title{
+	position: absolute;
+	top: 3%;
+	z-index: 3;
+	display: none;
+}
+
+.title img{
+	max-width: 100%;
+}
+
+#slider{
+	position: absolute;
+	top: 58%;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+}
+
+#slider.ui-slider{
+	border: none;
+	background: none;
+}
+
+#slider .ui-slider-handle {
+	background: url("../img/slider.png") no-repeat;
+	background-size: contain;
+
+	height: 50px;
+	width: 50px;
+
+	margin-left: -25px;
+	border: none;
+	display: block;
+}
+
+/***************************************
+			Responsive
+***************************************/			
+
+@media screen and (min-width: 768px){
+	.classic,
+	.zero{
+		background-position: -12px 0;
+	}
+
+	#slider .ui-slider-handle {
+		height: 70px;
+		width: 70px;
+
+		margin-left: -32px;
+		border: none;
+		display: block;
+	}
+}
