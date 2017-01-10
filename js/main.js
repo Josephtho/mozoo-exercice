@@ -9,7 +9,7 @@ function displayZeroTitle(ui){
 	if(ui['value'] < 18){
 		$('.title').fadeIn(700);		
 	} else {
-		$('.title').fadeOut(700);		
+		$('.title').fadeOut(350);		
 	}
 }
 
